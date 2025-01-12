@@ -1,7 +1,7 @@
 ## Blackjack
 A command-line implementation of the classic casino card game Blackjack (also known as 21) written in Python.
 
-As I am becoming more comfortable with using Python, I am exploring nd challenging myself to code different games in Python.
+As I am becoming more comfortable with using Python, I am exploring and challenging myself to code different games in Python.
 
 ### Getting started
 
@@ -10,7 +10,8 @@ You will need:
 - Clone this repository to your local machine:
 `git clone https://github.com/yourusername/blackjack-game.git
 cd blackjack-game`
-- To play the game you need to run: python3 blackjack.py 
+- To play the game you need to run: python3 blackjack.py
+- To run the tests: `python3 -m unittest discover test`
 
 ### Description
 
