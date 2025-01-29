@@ -28,25 +28,19 @@ class BlackjackGameTestCase(unittest.TestCase):
         self.assertEqual(len(self.player_cards), initial_cards + 1)
 
     def test_computer_plays_until_17(self):
-        """Test computer keeps playing until reaching 17 or more"""
         self.player = False
-        # Give computer a low card to start
         self.computer_cards = [5]
-
-        # Computer should keep drawing until >= 17
         while sum(self.computer_cards) < 17:
             self.deck.hand_card(self.player, self.player_cards, self.computer_cards)
 
         self.assertGreaterEqual(sum(self.computer_cards), 17)
 
     def test_blackjack_win_condition(self):
-        """Test player winning with exactly 21"""
-        self.player_cards = [10, 11]  # 21 with a 10 and an Ace
+        self.player_cards = [10, 11]
         total_player = sum(self.player_cards)
         self.assertEqual(total_player, 21)
 
     def test_computer_blackjack_win_condition(self):
-        """Test computer winning with exactly 21"""
         self.computer_cards = [10, 11]
         total_computer = sum(self.computer_cards)
         self.assertEqual(total_computer, 21)
